@@ -190,11 +190,19 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[240px]">
 <!-- Large Card -->
-<div class="md:col-span-2 md:row-span-2 bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden group animate-fade-in-up">
+<div class="md:col-span-2 md:row-span-2 bg-surface rounded-3xl p-6 md:p-10 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden group animate-fade-in-up flex flex-col justify-between">
 <div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 -mr-20 -mt-20"></div>
-<span class="material-symbols-outlined text-primary text-4xl mb-6 bg-surface-container-highest p-3 rounded-2xl inline-block" style="font-variation-settings: 'FILL' 1;">stethoscope</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">General Health &amp; Diagnostics</h3>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md relative z-10">Complete routine check-ups, preventive care, and accurate diagnostics to maintain your overall well-being. Early detection is our priority.</p>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 bg-surface-container-highest p-4 rounded-2xl inline-block w-fit" style="font-variation-settings: 'FILL' 1;">stethoscope</span>
+<h3 class="text-2xl md:text-3xl font-headline-lg font-bold text-on-surface mb-4 leading-tight tracking-tight">General Health <br class="hidden md:block" />&amp; Diagnostics</h3>
+<p class="text-base md:text-lg text-on-surface-variant max-w-lg mb-6 leading-relaxed">Complete routine check-ups, preventive care, and accurate diagnostics to maintain your overall well-being. Early detection is our priority.</p>
+</div>
+<ul class="hidden md:grid grid-cols-2 gap-4 text-sm font-medium text-on-surface-variant relative z-10 mt-auto pt-6 border-t border-outline-variant/30">
+    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Routine Blood Tests</li>
+    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> X-Ray &amp; Imaging</li>
+    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Preventive Screenings</li>
+    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Consultations</li>
+</ul>
 </div>
 <!-- Small Card 1 -->
 <div class="bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up delay-100">
