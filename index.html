@@ -326,7 +326,7 @@
 </div>
 <div>
 <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="phone">Phone Number</label>
-<input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
+<input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="phone" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" type="tel"/>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
 <div>
@@ -335,9 +335,10 @@
 </div>
 <div>
 <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="time">Time Slot</label>
-<select class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm appearance-none" id="time">
-<option>Morning (10-2)</option>
-<option>Evening (6-10)</option>
+<select required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm appearance-none" id="time">
+<option value="" disabled selected>Select a time</option>
+<option value="Morning">Morning (10-2)</option>
+<option value="Evening">Evening (6-10)</option>
 </select>
 </div>
 </div>
@@ -496,6 +497,43 @@
         const formSuccess = document.getElementById('form-success');
         const successIcon = document.getElementById('success-icon');
         const resetFormBtn = document.getElementById('reset-form-btn');
+        const dateInput = document.getElementById('date');
+        const timeSelect = document.getElementById('time');
+
+        if(dateInput && timeSelect) {
+            // Set minimum date to today
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            const todayStr = `${yyyy}-${mm}-${dd}`;
+            dateInput.min = todayStr;
+
+            const updateTimeSlots = () => {
+                const isToday = dateInput.value === todayStr;
+                const currentHour = new Date().getHours();
+                
+                const morningOption = timeSelect.options[1];
+                const eveningOption = timeSelect.options[2];
+
+                morningOption.disabled = false;
+                eveningOption.disabled = false;
+
+                if (isToday) {
+                    if (currentHour >= 14) {
+                        morningOption.disabled = true;
+                        if(timeSelect.value === morningOption.value) timeSelect.value = '';
+                    }
+                    if (currentHour >= 22) {
+                        eveningOption.disabled = true;
+                        if(timeSelect.value === eveningOption.value) timeSelect.value = '';
+                    }
+                }
+            };
+
+            dateInput.addEventListener('change', updateTimeSlots);
+            updateTimeSlots();
+        }
 
         if(form) {
             form.addEventListener('submit', (e) => {
