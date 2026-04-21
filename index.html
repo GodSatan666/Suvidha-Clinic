@@ -129,7 +129,7 @@
 <a class="nav-link font-manrope antialiased text-sm tracking-wide text-outline font-medium hover:text-primary transition-colors duration-200 active:scale-95 transition-transform pb-1 border-b-2 border-transparent" href="#about">About</a>
 <a class="nav-link font-manrope antialiased text-sm tracking-wide text-outline font-medium hover:text-primary transition-colors duration-200 active:scale-95 transition-transform pb-1 border-b-2 border-transparent" href="#contact">Contact</a>
 </nav>
-<a class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full hover:bg-primary-container transition-colors shadow-sm hover:shadow-md active:scale-95" href="#contact">
+<a class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full hover:bg-primary-container transition-colors shadow-sm hover:shadow-md active:scale-95" href="#appointment">
                 Book Appointment
             </a>
 <button id="mobile-menu-btn" class="md:hidden text-primary p-2 transition-transform active:scale-90">
@@ -156,7 +156,7 @@
 <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6 leading-tight">Expert Healthcare for You and Your Family</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">Led by Dr. Nipul Patel with over 25+ years of experience, providing compassionate, precise, and personalized medical care in Kandivali East.</p>
 <div class="flex flex-wrap gap-4">
-<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-all shadow-[0_4px_14px_0_rgba(0,63,135,0.39)] hover:shadow-[0_6px_20px_rgba(0,63,135,0.23)] hover:-translate-y-0.5 active:scale-95" href="#contact">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-all shadow-[0_4px_14px_0_rgba(0,63,135,0.39)] hover:shadow-[0_6px_20px_rgba(0,63,135,0.23)] hover:-translate-y-0.5 active:scale-95" href="#appointment">
                             Book a Consultation
                         </a>
 <a class="inline-flex items-center justify-center bg-surface text-primary border border-outline-variant font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-container transition-all active:scale-95" href="#services">
@@ -317,7 +317,7 @@
 </div>
 </div>
 <!-- Appointment Form -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/30 shadow-[0_10px_30px_rgba(0,0,0,0.03)] relative overflow-hidden">
+<div id="appointment" class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 border border-outline-variant/30 shadow-[0_10px_30px_rgba(0,0,0,0.03)] relative overflow-hidden">
 <h3 class="font-headline-md text-headline-md text-on-surface mb-6">Request an Appointment</h3>
 <form id="appointment-form" class="space-y-5">
 <div>
@@ -328,7 +328,7 @@
 <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="phone">Phone Number</label>
 <input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
 </div>
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
 <div>
 <label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="date">Preferred Date</label>
 <input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="date" type="date"/>
@@ -382,7 +382,7 @@
 </div>
 </footer>
 <!-- FAB for mobile immediate booking -->
-<a class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(0,108,79,0.3)] z-40 active:scale-90 transition-transform" href="#contact">
+<a class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(0,108,79,0.3)] z-40 active:scale-90 transition-transform" href="#appointment">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_add_on</span>
 </a>
 <script>
