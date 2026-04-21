@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Suvidha Clinic - Expert Healthcare for You and Your Family</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f9f9ff",
+                        "tertiary-container": "#56595b",
+                        "on-secondary-fixed": "#002116",
+                        "on-primary-container": "#bbd0ff",
+                        "outline-variant": "#c2c6d4",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-tint": "#115cb9",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#d8e3fa",
+                        "on-primary-fixed": "#001a40",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#cdd0d2",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-dim": "#cfdaf1",
+                        "surface-container": "#e7eeff",
+                        "outline": "#727784",
+                        "surface-container-high": "#dee8ff",
+                        "on-secondary-fixed-variant": "#00513a",
+                        "secondary-container": "#67fcc6",
+                        "primary": "#003f87",
+                        "surface-variant": "#d8e3fa",
+                        "secondary-fixed": "#67fcc6",
+                        "on-surface": "#111c2c",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#006c4f",
+                        "primary-container": "#0056b3",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#263142",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-background": "#111c2c",
+                        "secondary-fixed-dim": "#44dfab",
+                        "on-secondary-container": "#007354",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#3e4244",
+                        "on-tertiary-fixed": "#191c1e",
+                        "surface-bright": "#f9f9ff",
+                        "primary-fixed-dim": "#acc7ff",
+                        "inverse-primary": "#acc7ff",
+                        "inverse-on-surface": "#ebf1ff",
+                        "on-surface-variant": "#424752",
+                        "on-primary-fixed-variant": "#004491"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "headline-xl": ["Manrope", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Manrope", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "headline-md": ["Manrope", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-xl": ["40px", { lineHeight: "48px", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20">
+<!-- TopAppBar -->
+<header id="main-header" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md dark:bg-slate-900/90 border-b border-slate-100 dark:border-slate-800 shadow-[0_20px_40px_rgba(0,86,179,0.05)] transition-all duration-300">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20 transition-all duration-300" id="header-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+<span class="text-2xl font-bold tracking-tighter text-primary">Suvidha Clinic</span>
+</div>
+<nav class="hidden md:flex gap-8" id="desktop-nav">
+<a class="nav-link font-manrope antialiased text-sm tracking-wide text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform" href="#home">Home</a>
+<a class="nav-link font-manrope antialiased text-sm tracking-wide text-outline font-medium hover:text-primary transition-colors duration-200 active:scale-95 transition-transform pb-1 border-b-2 border-transparent" href="#services">Services</a>
+<a class="nav-link font-manrope antialiased text-sm tracking-wide text-outline font-medium hover:text-primary transition-colors duration-200 active:scale-95 transition-transform pb-1 border-b-2 border-transparent" href="#about">About</a>
+<a class="nav-link font-manrope antialiased text-sm tracking-wide text-outline font-medium hover:text-primary transition-colors duration-200 active:scale-95 transition-transform pb-1 border-b-2 border-transparent" href="#contact">Contact</a>
+</nav>
+<a class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full hover:bg-primary-container transition-colors shadow-sm hover:shadow-md active:scale-95" href="#contact">
+                Book Appointment
+            </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2 transition-transform active:scale-90">
+<span class="material-symbols-outlined text-3xl transition-transform duration-300">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-xl transition-all duration-300 origin-top scale-y-0 opacity-0 flex flex-col z-40">
+    <nav class="flex flex-col p-6 gap-4">
+        <a class="mobile-nav-link font-manrope text-lg font-bold text-primary active:scale-95 transition-transform" href="#home">Home</a>
+        <a class="mobile-nav-link font-manrope text-lg font-medium text-outline active:scale-95 transition-transform" href="#services">Services</a>
+        <a class="mobile-nav-link font-manrope text-lg font-medium text-outline active:scale-95 transition-transform" href="#about">About</a>
+        <a class="mobile-nav-link font-manrope text-lg font-medium text-outline active:scale-95 transition-transform" href="#contact">Contact</a>
+    </nav>
+</div>
+</header>
+<!-- Main Content -->
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden bg-surface-container-lowest" id="home">
+<div class="max-w-[1280px] mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
+<div class="z-10 animate-fade-in-up">
+<span class="inline-block py-1.5 px-4 rounded-full bg-surface-container text-primary font-label-sm text-label-sm mb-6 shadow-sm border border-primary-fixed">Trusted Care Since 1998</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6 leading-tight">Expert Healthcare for You and Your Family</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">Led by Dr. Nipul Patel with over 25+ years of experience, providing compassionate, precise, and personalized medical care in Kandivali East.</p>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-all shadow-[0_4px_14px_0_rgba(0,63,135,0.39)] hover:shadow-[0_6px_20px_rgba(0,63,135,0.23)] hover:-translate-y-0.5 active:scale-95" href="#contact">
+                            Book a Consultation
+                        </a>
+<a class="inline-flex items-center justify-center bg-surface text-primary border border-outline-variant font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-container transition-all active:scale-95" href="#services">
+                            Our Services
+                        </a>
+</div>
+</div>
+<div class="relative h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] animate-fade-in-up delay-200">
+<img alt="Dr. Nipul Patel consulting with a patient in a modern, well-lit clinic" class="w-full h-full object-cover" data-alt="Experienced doctor in a white coat consulting warmly with a smiling patient in a bright, modern, clean clinic setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAupxSlM_loiAHdJDtjfrIoLDBgFV4KfcGjGl_dsWGdlIuJiG-8ynPuuLJvK3aApsCpDR7NwpkGe8LnseYU7LAPe-CtlkKNy8vJLVDg-LY4yTqRBhHQjYPyA_fZ2vBBFdbJwNZx06YMs4gqciLBa0qaupJ27F7H61aTB8_Idn0kehutordfT-KQv8FLyQQIBHWncWpUZjFxRZHKl9bWOg3eIUcSe6SpUBNzGwjmAdRC8y_30WDyEMxMFzdygt5rfh9YkfmhCsA41t21"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-bold">Dr. Nipul Patel</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">General Physician • 25+ Yrs Exp</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/30" id="services">
+<div class="max-w-[1280px] mx-auto px-6 md:px-12">
+<div class="text-center mb-16 animate-fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Comprehensive Care</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">We offer a wide range of medical services tailored to meet the unique needs of every patient, ensuring clinical precision and human-centric care.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]">
+<!-- Large Card -->
+<div class="md:col-span-2 md:row-span-2 bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden group animate-fade-in-up">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 -mr-20 -mt-20"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6 bg-surface-container-highest p-3 rounded-2xl inline-block" style="font-variation-settings: 'FILL' 1;">stethoscope</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">General Health &amp; Diagnostics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md relative z-10">Complete routine check-ups, preventive care, and accurate diagnostics to maintain your overall well-being. Early detection is our priority.</p>
+</div>
+<!-- Small Card 1 -->
+<div class="bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up delay-100">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4 bg-secondary-container p-2.5 rounded-xl inline-block" style="font-variation-settings: 'FILL' 1;">blood_pressure</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg font-bold mb-2">Diabetes Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Personalized plans for monitoring and managing blood sugar levels.</p>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up delay-200">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 bg-surface-container-highest p-2.5 rounded-xl inline-block" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg font-bold mb-2">Chronic Disease</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Long-term care strategies for hypertension, asthma, and more.</p>
+</div>
+<!-- Small Card 3 -->
+<div class="bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in-up delay-100">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4 bg-secondary-container p-2.5 rounded-xl inline-block" style="font-variation-settings: 'FILL' 1;">child_care</span>
+<h3 class="font-label-md text-label-md text-on-surface text-lg font-bold mb-2">Pediatric Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Gentle and expert medical attention for children of all ages.</p>
+</div>
+<!-- Medium Card spanning 2 cols -->
+<div class="md:col-span-2 bg-surface rounded-3xl p-8 border border-outline-variant/50 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center gap-8 animate-fade-in-up delay-200">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-4xl bg-surface-container p-4 rounded-2xl" style="font-variation-settings: 'FILL' 1;">thermometer</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface text-xl font-bold mb-2">Fever &amp; Viral Treatment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rapid diagnosis and effective treatment protocols for seasonal flus, viral infections, and persistent fevers to get you back on your feet quickly.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface relative overflow-hidden" id="about">
+<div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent opacity-50"></div>
+<div class="max-w-[1280px] mx-auto px-6 md:px-12">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 relative rounded-3xl overflow-hidden aspect-[4/5] shadow-lg animate-fade-in-up">
+<img alt="Doctor examining patient records" class="w-full h-full object-cover" data-alt="Close up of an experienced doctor's hands reviewing medical charts on a digital tablet in a clean, professional clinical setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuIXK62YWfvXJRcxdGc36jG60p1ceFqTiGh5OmiGF1uXWIKfZSPfLVlgFPgxFFL_-6Dneb8CoCaxVzmyejPVJ0fiQe9hmsE7B2T02dRN2wf0Ub969pASH4ScmHcEOtnxBQSmllOFWqIWAYHm08-C8gMcNaxFk0YXUlveTA2B5fY2_fELtCNzNw_vXJVqTBokWN5TuduUNSCg6D0UIr9Turmptv8EbVhlNohShXmk-B89sjpfEMcSMlfeI_DsCzVxp2FEK0d3SF5Pi-"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="order-1 md:order-2 animate-fade-in-up delay-100">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">A Legacy of Healing</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">At Suvidha Clinic, we believe that true healthcare goes beyond treating symptoms; it's about understanding the patient.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">For over two decades, Dr. Nipul Patel has been a pillar of health in the Kandivali East community. His approach combines clinical precision with deep empathy, ensuring every patient feels heard, respected, and thoroughly cared for. Our clinic utilizes modern medical practices while maintaining the warmth of a traditional family doctor.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold">25+ Years Experience</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Decades of diagnosing and treating complex medical conditions.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Patient-Centric Approach</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">We take the time to listen and tailor treatments to individual needs.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/30" id="contact">
+<div class="max-w-[1280px] mx-auto px-6 md:px-12">
+<div class="text-center mb-16 animate-fade-in-up">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Visit Us</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Book an appointment online or visit our clinic in Kandivali East.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12 bg-surface rounded-[2rem] p-8 md:p-12 shadow-sm border border-outline-variant/50 animate-fade-in-up delay-100">
+<!-- Contact Info & Map -->
+<div class="space-y-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Clinic Details</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Address</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Suvidha Clinic, Thakur Village,<br/>Kandivali East, Mumbai, Maharashtra 400101</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Hours</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Mon - Sat: 10:00 AM - 2:00 PM<br/>Evening: 6:00 PM - 10:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">call</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Phone</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">+91 98765 43210</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full h-80 min-h-[320px] bg-surface-container rounded-2xl border border-outline-variant overflow-hidden relative shadow-inner">
+<iframe 
+    src="https://maps.google.com/maps?q=Suvidha+Clinic,+Thakur+Village,+Kandivali+East,+Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+<!-- Appointment Form -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/30 shadow-[0_10px_30px_rgba(0,0,0,0.03)] relative overflow-hidden">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Request an Appointment</h3>
+<form id="appointment-form" class="space-y-5">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="name">Full Name</label>
+<input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="phone">Phone Number</label>
+<input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="date">Preferred Date</label>
+<input required class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm" id="date" type="date"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="time">Time Slot</label>
+<select class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm appearance-none" id="time">
+<option>Morning (10-2)</option>
+<option>Evening (6-10)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="reason">Reason for Visit (Optional)</label>
+<textarea class="w-full bg-[#F1F5F9] focus:bg-white border border-transparent focus:border-primary rounded-lg px-4 py-3 text-body-md text-on-surface transition-colors outline-none shadow-sm resize-none" id="reason" placeholder="Briefly describe your symptoms..." rows="3"></textarea>
+</div>
+<button id="submit-btn" class="w-full bg-primary text-on-primary font-label-md text-label-md py-3.5 rounded-lg hover:bg-primary-container transition-colors shadow-[0_2px_0_rgba(0,0,0,0.1)] active:translate-y-[2px] active:shadow-none mt-2 relative overflow-hidden" type="submit">
+                                <span class="relative z-10 transition-opacity duration-200" id="btn-text">Confirm Booking Request</span>
+                                <div id="btn-spinner" class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200">
+                                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+</form>
+<div id="form-success" class="absolute inset-0 bg-surface-container-lowest/95 backdrop-blur-sm z-10 rounded-2xl flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-300 transform scale-95">
+    <div class="w-16 h-16 bg-secondary-container rounded-full flex items-center justify-center mb-4 text-secondary scale-0 transition-transform duration-500 delay-150" id="success-icon">
+        <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+    </div>
+    <h4 class="font-headline-md text-headline-md text-on-surface mb-2">Request Sent!</h4>
+    <p class="font-body-md text-body-md text-on-surface-variant text-center max-w-[250px]">We'll contact you shortly to confirm your appointment.</p>
+    <button type="button" id="reset-form-btn" class="mt-6 text-primary font-label-md hover:text-primary-container transition-colors">Book another</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
+<div class="text-lg font-black text-blue-800 dark:text-blue-300">
+                Suvidha Clinic
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+</div>
+<div class="font-manrope text-xs uppercase tracking-widest text-slate-500 dark:text-slate-500 text-center md:text-right">
+                © 2024 Suvidha Clinic. Clinical Precision. Human-Centric Care.
+            </div>
+</div>
+</footer>
+<!-- FAB for mobile immediate booking -->
+<a class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(0,108,79,0.3)] z-40 active:scale-90 transition-transform" href="#contact">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_add_on</span>
+</a>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Navbar Scroll Effect ---
+        const header = document.getElementById('main-header');
+        const headerContainer = document.getElementById('header-container');
+
+        const updateNavbar = () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-[0_10px_30px_rgba(0,0,0,0.08)]', 'bg-white/95');
+                header.classList.remove('bg-white/90', 'shadow-[0_20px_40px_rgba(0,86,179,0.05)]');
+                headerContainer.classList.remove('h-20');
+                headerContainer.classList.add('h-16');
+            } else {
+                header.classList.remove('shadow-[0_10px_30px_rgba(0,0,0,0.08)]', 'bg-white/95');
+                header.classList.add('bg-white/90', 'shadow-[0_20px_40px_rgba(0,86,179,0.05)]');
+                headerContainer.classList.remove('h-16');
+                headerContainer.classList.add('h-20');
+            }
+        };
+
+        window.addEventListener('scroll', updateNavbar);
+        updateNavbar(); // Init
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuBtn.querySelector('span');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        let isMenuOpen = false;
+
+        const toggleMenu = () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('scale-y-0', 'opacity-0');
+                mobileMenuIcon.innerText = 'close';
+            } else {
+                mobileMenu.classList.add('scale-y-0', 'opacity-0');
+                mobileMenuIcon.innerText = 'menu';
+            }
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', () => {
+            if(isMenuOpen) toggleMenu();
+        }));
+
+        // --- Active Nav Link Highlighting & Intersection Observers ---
+        const sections = document.querySelectorAll('section[id]');
+
+        // Animation observer for revealing items
+        const revealElements = document.querySelectorAll('.animate-fade-in-up');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            revealObserver.observe(el);
+        });
+
+        // Scroll observer for Active Links
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('text-primary', 'font-bold', 'border-primary');
+                        link.classList.add('text-outline', 'font-medium', 'border-transparent');
+                    });
+                    
+                    const activeDesktopLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                    if(activeDesktopLink) {
+                        activeDesktopLink.classList.add('text-primary', 'font-bold', 'border-primary');
+                        activeDesktopLink.classList.remove('text-outline', 'font-medium', 'border-transparent');
+                    }
+
+                    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                        link.classList.remove('text-primary', 'font-bold');
+                        link.classList.add('text-outline', 'font-medium');
+                    });
+                    
+                    const activeMobileLink = document.querySelector(`.mobile-nav-link[href="#${id}"]`);
+                    if(activeMobileLink) {
+                        activeMobileLink.classList.add('text-primary', 'font-bold');
+                        activeMobileLink.classList.remove('text-outline', 'font-medium');
+                    }
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        sections.forEach(section => {
+            scrollObserver.observe(section);
+        });
+
+        // --- Form Interaction ---
+        const form = document.getElementById('appointment-form');
+        const btnText = document.getElementById('btn-text');
+        const btnSpinner = document.getElementById('btn-spinner');
+        const formSuccess = document.getElementById('form-success');
+        const successIcon = document.getElementById('success-icon');
+        const resetFormBtn = document.getElementById('reset-form-btn');
+
+        if(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const date = document.getElementById('date').value;
+                
+                if(!name || !phone || !date) {
+                    return;
+                }
+                
+                // Store in local storage for admin
+                const time = document.getElementById('time').value;
+                const reason = document.getElementById('reason').value;
+                
+                const appointments = JSON.parse(localStorage.getItem('appointments') || '[]');
+                appointments.push({ name, phone, date, time, reason, timestamp: new Date().toISOString() });
+                localStorage.setItem('appointments', JSON.stringify(appointments));
+                console.log('Appointment stored in localStorage (admin access):', appointments);
+
+                // Simulate Network Request
+                btnText.classList.add('opacity-0');
+                btnSpinner.classList.remove('opacity-0');
+                
+                setTimeout(() => {
+                    // Success State!
+                    btnSpinner.classList.add('opacity-0');
+                    btnText.classList.remove('opacity-0');
+                    
+                    // Show success overlay
+                    formSuccess.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+                    formSuccess.classList.add('scale-100');
+                    
+                    setTimeout(() => {
+                        successIcon.classList.remove('scale-0');
+                        successIcon.classList.add('scale-100');
+                    }, 100);
+
+                }, 1200);
+            });
+        }
+
+        if(resetFormBtn) {
+            resetFormBtn.addEventListener('click', () => {
+                form.reset();
+                successIcon.classList.remove('scale-100');
+                successIcon.classList.add('scale-0');
+                formSuccess.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    formSuccess.classList.remove('scale-100');
+                    formSuccess.classList.add('scale-95');
+                }, 300);
+            });
+        }
+    });
+</script>
+</body></html>
